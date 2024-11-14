@@ -7,5 +7,5 @@ data class Produtos(
     val hamburguer: Int = 0,
     var email : String = "",
     var status : String = "",
-    var id : Int =0
+    var id : String = ""
     )

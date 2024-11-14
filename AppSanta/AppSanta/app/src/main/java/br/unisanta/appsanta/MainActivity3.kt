@@ -35,7 +35,7 @@ class MainActivity3 : AppCompatActivity(R.layout.activity_main3) {
                     "pizza" to pizza,
                     "crepe" to crepe,
                     "hamburguer" to hamburguer,
-                    "status" to "em espera"
+                    "status" to "Pendente"
 
                     )
 

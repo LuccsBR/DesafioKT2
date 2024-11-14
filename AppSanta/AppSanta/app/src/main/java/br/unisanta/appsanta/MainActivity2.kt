@@ -6,7 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import br.unisanta.appsanta.adapter.ProdutosAdapter
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class MainActivity2 : AppCompatActivity(R.layout.activity_main2) {
 
@@ -15,7 +14,6 @@ class MainActivity2 : AppCompatActivity(R.layout.activity_main2) {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val fabVolta = findViewById<FloatingActionButton>(R.id.floatingActionButton)
         val rvProduto = findViewById<RecyclerView>(R.id.rc_Produto)
 
         rvProduto.layoutManager = LinearLayoutManager(this)
@@ -25,8 +23,6 @@ class MainActivity2 : AppCompatActivity(R.layout.activity_main2) {
             rvProduto.adapter = adapter
         }
 
-        fabVolta.setOnClickListener {
-            finish()
-        }
+
     }
 }

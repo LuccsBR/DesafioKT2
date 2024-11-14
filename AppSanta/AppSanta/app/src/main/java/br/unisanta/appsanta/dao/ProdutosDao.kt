@@ -1,6 +1,7 @@
 import android.util.Log
 import br.unisanta.appsanta.model.Produtos
 import com.google.firebase.Firebase
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.firestore
 
 class ProdutosDao {
@@ -16,6 +17,7 @@ class ProdutosDao {
                 Log.d("TAG", "Dados recebidos: ${result.size()} documentos")
                 for (document in result) {
                     val produto = document.toObject(Produtos::class.java)
+                    produto.id = document.id
                     produtos.add(produto)
                     Log.d("TAG", "Produto: $produto")
                 }
@@ -28,14 +30,17 @@ class ProdutosDao {
     }
 
     fun atualizarStatusPedido(id: String, novoStatus: String, callback: (Boolean) -> Unit) {
-        val pedidoRef = db.collection("pedidos").document(id)
+        val pedidoRef = db.collection("produtos").document(id)
 
-        pedidoRef.update("status", novoStatus)
+        pedidoRef.update(mapOf(
+            "status" to novoStatus,
+            "dataModificacao" to FieldValue.serverTimestamp()
+        ))
             .addOnSuccessListener {
                 callback(true)
             }
             .addOnFailureListener { e ->
-                Log.w("Erro", "Error updating document", e)
+                Log.w("Erro", "Erro ao atualizar documento", e)
                 callback(false)
             }
     }

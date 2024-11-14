@@ -18,16 +18,14 @@
 
         <TextView
             android:id="@+id/txtNome"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_width="51dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="10dp"
             android:paddingLeft="5dp"
             android:text="Pizza:"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.311"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -35,44 +33,39 @@
             android:id="@+id/txtNome2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="56dp"
+            android:layout_marginTop="15dp"
             android:paddingLeft="5dp"
             android:text="Crepe:"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.245"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/txtNome" />
 
         <TextView
             android:id="@+id/txtNome4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="92dp"
+            android:layout_marginTop="15dp"
             android:paddingLeft="5dp"
             android:text="Hamburguer:"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.377"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/txtNome2" />
 
         <TextView
             android:id="@+id/txtNome5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="132dp"
             android:paddingLeft="5dp"
             android:text="Nome"
             android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.779"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -80,64 +73,67 @@
             android:id="@+id/txtId"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="60dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
             android:paddingLeft="5dp"
             android:text="Pizza"
             android:textColor="@android:color/darker_gray"
             android:textSize="14sp"
-            app:layout_constraintEnd_toStartOf="@+id/txtNome"
+            app:layout_constraintStart_toEndOf="@+id/txtNome"
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/txtId2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="52dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="15dp"
             android:paddingLeft="5dp"
             android:text="Crepe"
             android:textColor="@android:color/darker_gray"
             android:textSize="14sp"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="0dp"
+            app:layout_constraintStart_toEndOf="@+id/txtNome2"
+            app:layout_constraintTop_toBottomOf="@+id/txtId"
             tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/txtId3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="92dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
             android:paddingLeft="5dp"
             android:text="Hamburguer"
             android:textColor="@android:color/darker_gray"
             android:textSize="14sp"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:layout_editor_absoluteX="4dp"
+            app:layout_constraintStart_toEndOf="@+id/txtNome4"
+            app:layout_constraintTop_toBottomOf="@+id/txtId2"
             tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/txtId5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
             android:paddingLeft="5dp"
             android:text="Staus"
             android:textColor="@android:color/darker_gray"
             android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtNome5"
             tools:ignore="MissingConstraints" />
 
         <Button
             android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="150dp"
+            android:layout_marginTop="50dp"
             android:text="Mudar Status"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.522"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toBottomOf="@+id/txtId5" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
